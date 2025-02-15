@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Turnstile Bot",
+    "version": "1.0",
+    "description": "Automate Cloudflare Turnstile clicks Fast and seamless integration.",
+    "content_scripts": [
+        {
+        "all_frames": true,
+        "js": [ "context.js" ],
+        "matches": [ "http://*/*", "https://*/*" ],
+        "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [ {
+        "matches": [ "http://*/*", "https://*/*" ],
+        "resources": [ "turnstile_core.js", "turnstile_core_bg.wasm" ]
+    } ]
+}
